@@ -150,9 +150,9 @@ export function QuizSection() {
                 {questions[currentQuestion].options.map((option, index) => {
                   const isCorrect = index === questions[currentQuestion].correct
                   const isSelected = selectedAnswer === index
-                  
+
                   let buttonClass = "w-full text-left p-4 rounded-lg transition-all duration-200 flex items-center gap-4 "
-                  
+
                   if (answered) {
                     if (isCorrect) {
                       buttonClass += "bg-accent/20 border-2 border-accent text-primary-foreground"
@@ -236,13 +236,13 @@ export function QuizSection() {
                 {score === questions.length
                   ? "¡Excelente! Eres un experto en convenios ambientales."
                   : score >= questions.length / 2
-                  ? "¡Buen trabajo! Tienes buenos conocimientos sobre estos convenios."
-                  : "Sigue aprendiendo sobre estos importantes convenios ambientales."}
+                    ? "¡Buen trabajo! Tienes buenos conocimientos sobre estos convenios."
+                    : "Sigue aprendiendo sobre estos importantes convenios ambientales."}
               </p>
               <Button
                 onClick={resetQuiz}
                 variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-primary-foreground/30  hover:bg-primary-foreground/10 text-black"
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
                 Reintentar Quiz
